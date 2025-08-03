@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodrop - Penambal Tembok & Seng Bocor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            color: #1a2a6c;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #1a2a6c;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #b21f1f;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .video-section {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .info-section {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #b21f1f;
+        }
+        
+        .features {
+            margin-bottom: 25px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(26, 42, 108, 0.05);
+            border-radius: 5px;
+        }
+        
+        .feature i {
+            color: #b21f1f;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+        
+        .preparation {
+            background: rgba(178, 31, 31, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+        
+        .preparation h3 {
+            color: #b21f1f;
+            margin-bottom: 15px;
+        }
+        
+        .preparation ul {
+            padding-left: 20px;
+        }
+        
+        .preparation li {
+            margin-bottom: 8px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            color: #b21f1f;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 15px 45px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .guarantee {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            color: #1a2a6c;
+            font-weight: 500;
+        }
+        
+        .guarantee i {
+            color: #b21f1f;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .contact {
+            margin-top: 15px;
+        }
+        
+        .contact a {
+            color: #4d9de0;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-house-damage"></i>
+            </div>
+            <h1>NODROP - Penambal Tembok & Seng Bocor</h1>
+            <p class="tagline">Solusi Cepat dan Efektif untuk Kebocoran</p>
+        </header>
+        
+        <div class="product-container">
+            <section class="video-section">
+                <h2><i class="fas fa-video"></i> Demo Produk</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/6cVbi5ZmMoE" title="Demo Nodrop" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p style="margin-top: 15px; text-align: center; font-style: italic;">
+                    Lihat bagaimana Nodrop bekerja dengan efektif menambal kebocoran
+                </p>
+            </section>
+            
+            <section class="info-section">
+                <h2><i class="fas fa-info-circle"></i> Tentang Produk</h2>
+                <p>Nodrop adalah bahan penambal tembok dan seng bocor yang sangat efektif. Dengan formula khusus, produk ini mampu menutup kebocoran dengan sempurna dan tahan lama.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Mudah digunakan - cukup aplikasikan pada area bocor</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Tahan terhadap cuaca ekstrim dan perubahan suhu</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Hasil permanen - tidak perlu perbaikan berulang</div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Bahan ramah lingkungan dan tidak beracun</div>
+                    </div>
+                </div>
+                
+                <div class="preparation">
+                    <h3><i class="fas fa-clipboard-list"></i> Persiapan Sebelum Penggunaan</h3>
+                    <p>Agar hasil maksimal, pastikan:</p>
+                    <ul>
+                        <li>Permukaan tembok atau seng benar-benar bersih dari kotoran</li>
+                        <li>Hilangkan semua debu, tanah, atau karat</li>
+                        <li>Pastikan area yang akan ditambal dalam keadaan kering</li>
+                        <li>Gunakan alat pelindung diri (sarung tangan) saat aplikasi</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+        <section class="cta-section">
+            <h2>Dapatkan Nodrop Sekarang!</h2>
+            <p>Solusi praktis untuk masalah kebocoran di rumah Anda</p>
+            <div class="price">Rp 85.000</div>
+            <a href="https://vt.tiktok.com/ZSS5QAMXJ/" class="btn" target="_blank">
+                <i class="fas fa-shopping-cart"></i> BELI VIA TIKTOK SHOP
+            </a>
+            <div class="guarantee">
+                <i class="fas fa-shield-alt"></i>
+                <span>Garansi Kepuasan 100% - Uang Kembali Jika Tidak Puas</span>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Nodrop - Solusi Tepat untuk Atasi Kebocoran</p>
+            <div class="contact">
+                <p>Pertanyaan lebih lanjut? <a href="https://www.youtube.com/@user-ye1wq6wq5y" target="_blank">Hubungi Kami via YouTube</a></p>
+            </div>
+            <p style="margin-top: 10px;">&copy; 2023 Nodrop. Hak Cipta Dilindungi.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animasi tombol saat dihover
+        document.querySelector('.btn').addEventListener('mouseover', function() {
+            this.style.background = 'linear-gradient(to right, #b21f1f, #1a2a6c)';
+        });
+        
+        document.querySelector('.btn').addEventListener('mouseout', function() {
+            this.style.background = 'linear-gradient(to right, #1a2a6c, #b21f1f)';
+        });
+        
+        // Animasi fitur saat dihover
+        const features = document.querySelectorAll('.feature');
+        features.forEach(feature => {
+            feature.addEventListener('mouseover', function() {
+                this.style.transform = 'translateX(5px)';
+                this.style.boxShadow = '0 3px 10px rgba(0,0,0,0.1)';
+            });
+            
+            feature.addEventListener('mouseout', function() {
+                this.style.transform = 'translateX(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
